@@ -1,0 +1,54 @@
+datasets:
+  - json_path: ./playground/annotations/chartqa_parse_llava_format.jsonl
+  - json_path: ./playground/annotations/chartqa_parse_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/deepform_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/docvqa_unfold_llava_format.jsonl
+  - json_path: ./playground/annotations/docvqa_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/infographicsvqa_llava_format.jsonl
+  - json_path: ./playground/annotations/infographicsvqa_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/kleistercharity_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/tabfact_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/wikitablequestions_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/visualmrc_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/LLaVA-ReCap-118K-w-prompt-118319.jsonl
+  - json_path: ./playground/annotations/LLaVA-ReCap-558K-w-prompt-558128.jsonl
+  - json_path: ./playground/annotations/LLaVA-ReCap-CC3M-w-prompt-2857560.jsonl
+    sampling_strategy: first:1000000
+  - json_path: ./playground/annotations/ccpdf_ocr_llava_format_filter.jsonl
+    sampling_strategy: first:500000
+  - json_path: ./playground/annotations/rvl_cdip_ocr_struct_llava_format_filter.jsonl
+    sampling_strategy: first:150000
+  - json_path: ./playground/annotations/synthdog_zh_ocr_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/synthdog_en_ocr_unstruct_llava_format.jsonl
+    sampling_strategy: first:250000
+  - json_path: ./playground/annotations/vary_pretrain_zh_ocr_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/pubtabnet_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/turl_ocr_struct_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/alpaca_gpt4_data_en_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/openhermes2.5_llava_format_filter.jsonl
+    sampling_strategy: first:50000
+  - json_path: ./playground/annotations/alpaca_gpt4_data_zh_llava_format.jsonl
+  - json_path: ./playground/annotations/coig-cqia_llava_format.jsonl
+  - json_path: ./playground/annotations/ocrcc_ocr_llava_format.jsonl
+    sampling_strategy: first:200000
+  - json_path: ./playground/annotations/cocotext_ocr_full_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/llavar_pretrain_llava_format.jsonl
+    sampling_strategy: first:200000
+  - json_path: ./playground/annotations/textcaps_llava_format.jsonl
+  - json_path: ./playground/annotations/textocr_gpt4v_qa_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/textvqa_ocr_mplug_sft_llava_format_filter.jsonl
+  - json_path: ./playground/annotations/art_ocr_full_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/ctw_ocr_full_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/lsvt_ocr_full_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/rctw_ocr_full_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/rects_ocr_full_unstruct_llava_format.jsonl
+  - json_path: ./playground/annotations/dvqa_parse_llava_format.jsonl
+    sampling_strategy: first:100000
+  - json_path: ./playground/annotations/figureqa_parse_llava_format.jsonl
+    sampling_strategy: first:50000
+  - json_path: ./playground/annotations/plotqa_parse_llava_format.jsonl
+    sampling_strategy: first:50000
+  - json_path: ./playground/annotations/mmc-alignment_llava_format.jsonl
+  - json_path: ./playground/annotations/llava_instruct_150k_zh_filter.jsonl
+  - json_path: ./playground/annotations/Evol-Instruct-GPT4-Turbo-143K_filter.json
+    sampling_strategy: first:50000

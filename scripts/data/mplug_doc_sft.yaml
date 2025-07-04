@@ -1,0 +1,2 @@
+datasets:
+  - json_path: ./playground/annotations/DocStruct4M/DocDownstream-1.0/llava_train.jsonl

@@ -1,0 +1,49 @@
+datasets:
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/iiit5k-1990.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/robut_wtq-cauldron-llava_format--38241.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/textocr-gpt4v--25104.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/ai2d-internvl--12403.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/FigureQA-MathV360K--17587.jsonl
+    sampling_strategy: first:1000
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/infographic_vqa-4394.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/diagram_image_to_text-cauldron--295.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/lrv_chart-1776.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/k12_printing-256636.jsonl
+    sampling_strategy: first:20000
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/sroie-33616.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/ai2d-gpt4v--4864.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/multihiertt-cauldron--7614.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/vistext-cauldron--9964.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/robut_wikisql-cauldron--74984.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/chartqa-cauldron-llava_format--18260.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/visualmrc-cauldron--3022.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/dvqa-cauldron-llava_format--199995.jsonl
+    sampling_strategy: first:20000
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/textcaps-21942.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/magpie_pro-l3_80b_st--299990.jsonl
+    sampling_strategy: first:50000
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/chart2text-cauldron--26956.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/hitab-cauldron-llava_format--2495.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/hme100k-74492.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/robut_sqa-cauldron--8509.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/infographic-gpt4v--1982.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/chrome_writting-8825.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/infographic_vqa_llava_format-2113.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/magpie_pro-l3_80b_mt--299988.jsonl
+    sampling_strategy: first:50000
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/screen2words-cauldron--15725.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/rendered_text-cauldron--9995.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/iam-cauldron--5658.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/magpie_pro-qwen2_72b_st--299982.jsonl
+    sampling_strategy: first:50000
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/tqa-cauldron-llava_format--27302.jsonl
+  - json_path: ./playground/annotations/LLaVA-OneVision-Data/ai2d-cauldron-llava_format--2429.jsonl
+  - json_path: ./playground/annotations/synthdog_en_ocr_unstruct_llava_format.jsonl
+    sampling_strategy: first:40000
+  - json_path: ./playground/annotations/mmc-instruction-non-arxiv_llava_format.jsonl
+    sampling_strategy: first:20000
+  - json_path: ./playground/annotations/mmc-instruction-arxiv_llava_format.jsonl
+    sampling_strategy: first:20000
+  # - json_path: /group/40033/public_datasets/DocStruct4M/DocDownstream-1.0/llava_train.jsonl
+  # - json_path: /group/40079/yinanzhou/LLaVA-NeXT/playground/annotations/llava_sft_sum_chart_crello_ccmain_qa_full1_4M_version2.jsonl
+  - json_path: /group/40033/public_datasets/DocStruct4M/DocDownstream-1.0/sft_doge_refined_llava.jsonl

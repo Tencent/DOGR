@@ -1,0 +1,2 @@
+datasets:
+  - json_path: ./playground/annotations/llava_sft_sum_chart_crello_ccmain_qa_full1_4M_version2.jsonl

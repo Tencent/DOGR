@@ -1,0 +1,80 @@
+Metadata-Version: 2.2
+Name: llava
+Version: 1.7.0.dev0
+Summary: LLaVA OneVision: The Next Generation of LLaVA with Better Image and Video Understanding Capabilities
+Project-URL: Homepage, https://llava-vl.github.io
+Project-URL: Bug Tracker, https://github.com/haotian-liu/LLaVA/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: standalone
+Requires-Dist: shortuuid; extra == "standalone"
+Requires-Dist: httpx==0.24.0; extra == "standalone"
+Requires-Dist: einops; extra == "standalone"
+Requires-Dist: ftfy; extra == "standalone"
+Provides-Extra: train
+Requires-Dist: llava[standalone]; extra == "train"
+Requires-Dist: numpy==1.26.1; extra == "train"
+Requires-Dist: open_clip_torch; extra == "train"
+Requires-Dist: fastapi; extra == "train"
+Requires-Dist: gradio==3.35.2; extra == "train"
+Requires-Dist: markdown2[all]; extra == "train"
+Requires-Dist: numpy; extra == "train"
+Requires-Dist: requests; extra == "train"
+Requires-Dist: sentencepiece; extra == "train"
+Requires-Dist: torch==2.1.2; extra == "train"
+Requires-Dist: torchvision==0.16.2; extra == "train"
+Requires-Dist: uvicorn; extra == "train"
+Requires-Dist: wandb; extra == "train"
+Requires-Dist: deepspeed==0.14.2; extra == "train"
+Requires-Dist: peft==0.4.0; extra == "train"
+Requires-Dist: accelerate>=0.29.1; extra == "train"
+Requires-Dist: tokenizers~=0.15.2; extra == "train"
+Requires-Dist: bitsandbytes==0.41.0; extra == "train"
+Requires-Dist: scikit-learn==1.2.2; extra == "train"
+Requires-Dist: sentencepiece~=0.1.99; extra == "train"
+Requires-Dist: einops==0.6.1; extra == "train"
+Requires-Dist: einops-exts==0.0.4; extra == "train"
+Requires-Dist: gradio_client==0.2.9; extra == "train"
+Requires-Dist: urllib3<=2.0.0; extra == "train"
+Requires-Dist: datasets==2.16.1; extra == "train"
+Requires-Dist: pydantic==1.10.8; extra == "train"
+Requires-Dist: timm; extra == "train"
+Requires-Dist: hf_transfer; extra == "train"
+Requires-Dist: opencv-python; extra == "train"
+Requires-Dist: av; extra == "train"
+Requires-Dist: decord; extra == "train"
+Requires-Dist: tyro; extra == "train"
+Requires-Dist: scipy; extra == "train"
+
+# Introduction
+LLaVA-NeXT的NPU版本代码，且使用来自于InternVL-8B的internvit-300M作为vision encoder
+
+# Install
+sh scripts/install.sh
+
+# Pre-training
+Pretraining with LLaVA-558K
+
+`
+sh scripts/train/pretrain_internvit.sh
+`
+
+# SFT
+
+## SFT with our-own dataset, corresponding to LLaVA-NeXT stage 1.5
+
+`
+sh scripts/train/finetune_internvit_stage1_5.sh
+`
+
+## SFT with LLaVA-665K
+
+`
+sh scripts/train/finetune_internvit.sh
+`
+
+## SFT with LLaVA-OneVision Data
+
+TBD

@@ -1,0 +1,2 @@
+datasets:
+  - json_path: ./playground/annotations/DocStruct4M/DocDownstream-1.0/sft_sum_chart_crello_ccmain_qa_without_plain_qa_llava.jsonl

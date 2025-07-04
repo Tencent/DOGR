@@ -1,0 +1,2 @@
+datasets:
+  - json_path: ./playground/annotations/llava_pretrain_ChartQA_crello_CCMAIN_with_decode_full5M_version2.jsonl
