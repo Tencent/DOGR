@@ -44,6 +44,4 @@ datasets:
     sampling_strategy: first:20000
   - json_path: ./playground/annotations/mmc-instruction-arxiv_llava_format.jsonl
     sampling_strategy: first:20000
-  # - json_path: /group/40033/public_datasets/DocStruct4M/DocDownstream-1.0/llava_train.jsonl
-  # - json_path: /group/40079/yinanzhou/LLaVA-NeXT/playground/annotations/llava_sft_sum_chart_crello_ccmain_qa_full1_4M_version2.jsonl
   - json_path: /group/40033/public_datasets/DocStruct4M/DocDownstream-1.0/sft_doge_refined_llava.jsonl

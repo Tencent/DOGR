@@ -98,9 +98,9 @@ for item in tqdm.tqdm(test_data):
 model_name = pretrained.split("/")[-1]
 data_name = test_file_path.split("/")[-1].split(".")[0]
 output_dir = f"inference_with_mplug/{dataset}_inference_output/{model_name}"
-os.makedirs(output_dir.replace("inference_with_mplug","/group/40079/yinanzhou/LLaVA-NeXT/inference_with_mplug"), exist_ok=True)
+# os.makedirs(output_dir.replace("inference_with_mplug","inference_with_mplug"), exist_ok=True)
 
-with open(f"/group/40079/yinanzhou/LLaVA-NeXT/{output_dir}/{data_name}_result.jsonl", "w") as f:
+with open(f"{output_dir}/{data_name}_result.jsonl", "w") as f:
     for line in rst_list:
         json.dump(line, f)
         f.write('\n')

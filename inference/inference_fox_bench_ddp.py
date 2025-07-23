@@ -70,11 +70,7 @@ def main():
     test_file_path = args.test_file_path
 
     image_dir = "[path_to:]/focus_benchmark_test/en_pdf_png"
-    # image_dir = "/group/40034/yinanzhou/iccv_rebuttal/focus_benchmark_test/cn_pdf_png"
-
-    # test_file_path = os.path.join(image_dir, 'test', dataset+'_llavanext_test.jsonl')
-    # test_file_path = "/group/40033/public_datasets/DocStruct4M/DocDownstream-1.0/test/DOGE_test_new_pq_llava.jsonl"
-    # "0,1,2,3"
+   
     model_name = "llava_qwen"
     device = f"npu:{rank}"
     device_map = f"npu:{rank}"
@@ -144,7 +140,7 @@ def main():
         for rank_idx in range(world_size):
             while not os.path.exists(args.output_file.replace(".json", f"_{rank_idx}.json")):
                 time.sleep(10)
-                print(f"/group/40079/yinanzhou/LLaVA-NeXT/{output_dir}/doge_result_{rank_idx}.json")
+                print(f"LLaVA-NeXT/{output_dir}/doge_result_{rank_idx}.json")
             
             with open(args.output_file.replace(".json", f"_{rank_idx}.json"), "r") as f:
                 final_result += json.load(f)

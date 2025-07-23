@@ -13,4 +13,4 @@ pip install scipy
 pip install pandas
 
 
-python evaluation/eval_doge_bench.py --pred_file [doge_bench inference jsonl file path]
+python evaluation/eval_dogr_bench.py --pred_file [doge_bench inference jsonl file path]

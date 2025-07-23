@@ -23,7 +23,7 @@ args = parser.parse_args()
 
 pretrained = args.model_path
 dataset = args.dataset
-image_dir = "/group/40033/public_datasets/DocStruct4M/DocDownstream-1.0"
+image_dir = "DocStruct4M/DocDownstream-1.0"
 test_file_path = os.path.join(image_dir, 'test', dataset+'_llavanext_test.jsonl')
 
 model_name = "llava_qwen"
@@ -38,7 +38,6 @@ with open(test_file_path, "r") as f:
     test_data = [json.loads(line) for line in f]
 print("test_length:",len(test_data))
 template ={"image": [], "messages": [{"role": "user", "content": "<|image|>"}, {"role": "assistant", "content": ""}], "task_name": "", "dataset_name": "ChartQA_PCG", "model_answer": "", "gt_answer": ""}
-# template_t2bbox ={"image": [], "messages": [{"role": "user", "content": "<|image|>"}, {"role": "assistant", "content": ""}], "task_name": "t2bbox_sft", "dataset_name": "ChartQA_PCG", "model_answer": "", "gt_answer": ""}
 
 output = {}
 rst_list = []
@@ -95,7 +94,7 @@ data_name = test_file_path.split("/")[-1].split(".")[0]
 output_dir = f"inference_with_mplug/{dataset}_inference_output/{model_name}"
 os.makedirs(output_dir, exist_ok=True)
 
-with open(f"/group/40079/yinanzhou/LLaVA-NeXT/{output_dir}/{data_name}_result.jsonl", "w") as f:
+with open(f"{output_dir}/{data_name}_result.jsonl", "w") as f:
     for line in rst_list:
         json.dump(line, f)
         f.write('\n')

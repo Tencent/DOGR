@@ -22,7 +22,7 @@ from gradio_image_prompter import ImagePrompter
 # from gradio_box_promptable_image import BoxPromptableImage
 
 import argparse
-MODEL_PATH="/group/40079/yinanzhou/LLaVA-NeXT/checkpoints/high/llavanext-model_zoo_InternViT-300M-448px-from-InternVL2-8b-model_zoo_Qwen_Qwen2-7B-Instruct-ln_mlp2x_gelu-mplug-PCG-full5M-pretrain-decode_correct-no-padding-48npu--qwen_1_5"
+MODEL_PATH="[MODEL_PATH]"
 warnings.filterwarnings("ignore")
 model_name = "llava_qwen"
 device = "npu:0"
@@ -169,8 +169,8 @@ def infer_instance(prompter, qs,prompt_added):
             highlighted_text.append([s+" ",None])
     drawed = draw_new_bbox("Bbox in Prompt", prompter,prompt)
     if len(ocrs)==0:
-        return highlighted_text,gr.Image(type="numpy", label="DOGE BBOX ANSWER",visible=False),drawed,'Bbox in Prompt'
-    return  highlighted_text,gr.Image(type="numpy", label="DOGE BBOX ANSWER",visible=True,value= image),drawed,'Bbox in Prompt'
+        return highlighted_text,gr.Image(type="numpy", label="DOGR BBOX ANSWER",visible=False),drawed,'Bbox in Prompt'
+    return  highlighted_text,gr.Image(type="numpy", label="DOGR BBOX ANSWER",visible=True,value= image),drawed,'Bbox in Prompt'
     
             
 
@@ -439,7 +439,7 @@ def infer_model():
     
     # image.select(get_click_coords, [image], [image, image])
     with gr.Blocks() as demo:
-        gr.Markdown('<h1 style="text-align: center;">DOGE: Towards Versatile Visual Document Grounding and Referring</h1>')
+        gr.Markdown('<h1 style="text-align: center;">DOGR: Towards Versatile Visual Document Grounding and Referring</h1>')
         # prompter = gr.Image(type="pil",label="Input Image")
         # prompter = BoxPromptableImage()
         refresh_trigger = gr.Number(value=0, visible=False)
@@ -501,9 +501,9 @@ def infer_model():
 
             with gr.Column(scale=3):
             # import pdb; pdb.set_trace()
-                image_output_gt = gr.Image(type="numpy", label="DOGE BBOX ANSWER")
+                image_output_gt = gr.Image(type="numpy", label="DOGR BBOX ANSWER")
                 outtext = gr.HighlightedText(
-                label="DOGE OUTPUT",
+                label="DOGR OUTPUT",
                 combine_adjacent=True,
                 show_legend=False,
                 color_map={"0": "red", "1":"orange","2": "yellow", "3":"green", "4":"blue", "5":"pink", "6":"purple","ERROR":"gray"}
@@ -538,21 +538,21 @@ def infer_model():
             gr.Examples(
                 examples=[
                     [
-                        {'image':"/group/40079/yinanzhou/LLaVA-NeXT/inference_with_mplug/demo_images/seafood.png","points":[]},
+                        {'image':"inference/demo_images/seafood.png","points":[]},
                         "Short Answer","With bbox",
                         "What are the main ingredients in the <bbox>421,108,577,134</bbox>?",
                         "Bbox in Prompt"
                         
                     ],
                     [
-                        {'image':"/group/40079/yinanzhou/LLaVA-NeXT/inference_with_mplug/demo_images/doge_chart.png","points":[]},
+                        {'image':"inference/demo_images/doge_chart.png","points":[]},
                         "Long Answer","With bbox",
                         "What is the sum of the value for <bbox>131,876,283,912</bbox>, <bbox>527,719,689,749</bbox>, and <bbox>305,904,703,939</bbox>?",
                         "Bbox in Prompt"
                         
                     ],
                     [
-                        {'image':"/group/40079/yinanzhou/LLaVA-NeXT/inference_with_mplug/demo_images/doc0.png","points":[]},
+                        {'image':"inference/demo_images/doc0.png","points":[]},
                         "Long Answer","With bbox",
                         "What was the price per share for the common stock acquired on 04/30/2021?",
                         "Bbox in Prompt"
@@ -560,21 +560,21 @@ def infer_model():
                     ],
                     [
                         
-                        {'image':"/group/40079/yinanzhou/LLaVA-NeXT/inference_with_mplug/demo_images/chris.png","points":[]},
+                        {'image':"inference/demo_images/chris.png","points":[]},
                         "Long Answer","With bbox",
                         "What is the holiday in <bbox>127,614,595,748</bbox>?",
                         "Bbox in Prompt"
                     ],
                     [
                         
-                        {'image':"/group/40079/yinanzhou/LLaVA-NeXT/inference_with_mplug/demo_images/doge_page.png","points":[]},
+                        {'image':"inference/demo_images/doge_page.png","points":[]},
                         "Short Answer","Without bbox",
                         "Translate the text in <bbox>86,311,485,392</bbox> into Chinese.",
                         "Bbox in Prompt"
                     ],
                     [
                         
-                        {'image':"/group/40079/yinanzhou/LLaVA-NeXT/inference_with_mplug/demo_images/handwritten.png","points":[]},
+                        {'image':"inference/demo_images/handwritten.png","points":[]},
                         "Long Answer","With bbox",
                         "Why is DOGE useful?",
                         "Bbox in Prompt"

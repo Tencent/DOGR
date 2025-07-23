@@ -26,7 +26,7 @@ def draw_bbox(image, bbox):
 def process_data(data):
     img_path = data['image'][0]
     # img_path = img_path.replace("./imgs/CCMAIN",'/group/40034/yinanzhou/pdf_grounding_construction/ccmain_png_filtered')
-    img_path = "/group/40033/public_datasets/DocStruct4M/DocDownstream-1.0/"+img_path
+    img_path = "DocStruct4M/DocDownstream-1.0/"+img_path
     question = data['messages'][0]['content']
     answer = data['model_answer']
     gt = data['gt_answer']
