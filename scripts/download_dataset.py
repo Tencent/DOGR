@@ -1,6 +1,3 @@
-# # pip install -U huggingface_hub
-# # huggingface-cli download --resume-download bigscience/bloom-560m --local-dir bloom-560m
-# huggingface-cli download --resume-download MAGAer13/mplug-owl-llama-7b --local-dir mplug-owl-llama-7b --local_dir_use_symlinks False
 
 from huggingface_hub import snapshot_download
 
