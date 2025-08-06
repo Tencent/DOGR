@@ -2,7 +2,7 @@
 
 *Towards Versatile Visual Document Grounding and Referring*
 
-Yinan Zhou*, Yuxin Chen*, Haokun Lin,Shuyu Yang, Li Zhu, Zhongang Qi‡, Chen Ma‡, Ying Shan
+Yinan Zhou*, Yuxin Chen*, Haokun Lin, Yichen Wu, Shuyu Yang, Li Zhu‡, Zhongang Qi‡, Chen Ma‡, Ying Shan
 
 *Equal Contribution †Project Lead ‡Corresponding Authors 
 
