@@ -10,7 +10,9 @@ from PIL import Image
 import requests
 import copy
 import torch
-import torch_npu
+
+#if npu
+# import torch_npu
 import json
 import tqdm
 from PIL import Image, ImageDraw
@@ -25,8 +27,13 @@ import argparse
 MODEL_PATH="[MODEL_PATH]"
 warnings.filterwarnings("ignore")
 model_name = "llava_qwen"
-device = "npu:0"
-device_map = "npu:0"
+
+device = "cuda:0"
+device_map = "cuda:0"
+##if npu
+# device = "npu:0"
+# device_map = "npu:0"
+
 tokenizer, model, image_processor, max_length = load_pretrained_model(MODEL_PATH, None, model_name, device_map=device_map, attn_implementation="eager")  # Add any other thing you want to pass in llava_model_args
 model.tokenizer = tokenizer
 model.eval()

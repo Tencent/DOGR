@@ -26,8 +26,8 @@ import argparse
 MODEL_PATH=[MODEL_PATH]
 warnings.filterwarnings("ignore")
 model_name = "llava_qwen"
-device = "npu:0"
 
+device = "npu:0"
 device_map = "npu:0"
 
 # device = "cuda:0"

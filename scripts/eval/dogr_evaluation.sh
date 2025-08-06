@@ -1,7 +1,3 @@
-# pip install nltk rouge_score icecream pycocoevalcap editdistance
-cd [LLaVA-NeXT_PATH]
-
-export PYTHONPATH=$PYTHONPATH:[LLaVA-NeXT_PATH]
 
 pip install rouge-score
 pip install icecream

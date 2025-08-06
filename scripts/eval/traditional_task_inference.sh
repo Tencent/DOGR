@@ -1,10 +1,4 @@
 
-# cd /group/40079/yinanzhou/LLaVA-NeXT
-cd /group/40079/yinanzhou/LLaVA-NeXT
-export PYTHONPATH=$PYTHONPATH:/group/40079/yinanzhou/LLaVA-NeXT
-
-
-
 MODEL_PATH=[model path]
 
 DATASETS=("DocVQA" "InfographicsVQA" "WikiTableQuestions" "DeepForm" "KleisterCharity" "TabFact" "VisualMRC" "ChartQA" )

@@ -1,6 +1,4 @@
 MODEL_PATH=[Model path]
-cd [LLaVA-NeXT_PATH]
-
 
 torchrun --nproc_per_node=8 --master_port=12345 inference/inference_dogr_ddp_gpu.py \
 --model_path ${MODEL_PATH} \

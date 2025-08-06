@@ -8,7 +8,6 @@ DATASETS=('mplug' 'crello' "chartqa" 'ccmain')
 #DocLocal4k  DOGE_poster DOGE_chart DOGE_pdf
 
 
-
 DEVICES=("0" "1" "2" "3")
 
 # 运行推理任务
