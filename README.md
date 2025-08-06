@@ -24,20 +24,18 @@ Yinan Zhou*, Yuxin Chen*, Haokun Lin, Yichen Wu, Shuyu Yang, Li Zhu‡, Zhongang
  ### Video
 [Watch the introduction video here!](https://www.youtube.com/watch?v=gfhF3oYH178&feature=youtu.be) 
 
-<!-- **🏃🏻‍♂️‍➡️ Inference**
+**🏃🏻‍♂️‍➡️ Inference**
 ```bash
 bash scripts/eval/dogr_bench_inference_ddp.sh
-``` -->
-<!-- **🏃🏻‍♂️‍➡️ Eval on DOGR-Bench**
+``` 
+**🏃🏻‍♂️‍➡️ Eval on DOGR-Bench**
 ```bash
 scripts/eval/dogr_evaluation.sh
-``` -->
+``` 
 
 ### DOGR Weights
 The model weights are in [MODEL WEIGHTS](https://huggingface.co/tencent/DOGR)
 
-
-tencent/DOGR
  ### Demo
 ```bash
 python inference/demo_gradio.py
