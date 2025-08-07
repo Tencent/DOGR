@@ -1,3 +1,10 @@
+<div align="center">
+    <img alt="DOGR logo" src="./doge.png" style="height: 200px;" />
+</div>
+
+
+<div align="center">
+
 # DOGE
 
 *Towards Versatile Visual Document Grounding and Referring*
