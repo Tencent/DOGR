@@ -30,13 +30,14 @@ Yinan Zhou*, Yuxin Chen*, Haokun Lin, Yichen Wu, Shuyu Yang, Li Zhu‡, Zhongang
 [Watch the introduction video here!](https://www.youtube.com/watch?v=gfhF3oYH178&feature=youtu.be) 
 
 
-###Installation
+
+ ### ⚙️Installation
 Our code is based on LLaVA-NeXT. Installation can be found in [LLaVA-NeXT](https://github.com/LLaVA-VL/LLaVA-NeXT) 
-**🏃🏻‍♂️‍➡️ Inference**
+ ### 🏃🏻‍♂️‍➡️ Inference
 ```bash
 bash scripts/eval/dogr_bench_inference_ddp.sh
 ``` 
-**🏃🏻‍♂️‍➡️ Eval on DOGR-Bench**
+ ### 🏃🏻‍♂️‍➡️ Eval on DOGR-Bench
 ```bash
 scripts/eval/dogr_evaluation.sh
 ``` 
