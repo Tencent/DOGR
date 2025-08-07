@@ -1,9 +1,6 @@
 <div align="center">
-    <img alt="DOGR logo" src="./doge.png" style="height: 200px;" />
+    <img alt="DOGR logo" src="./doge.png" style="height: 100px;" />
 </div>
-
-
-<div align="center">
 
 # DOGE
 
@@ -27,7 +24,7 @@ Yinan Zhou*, Yuxin Chen*, Haokun Lin, Yichen Wu, Shuyu Yang, Li Zhu‡, Zhongang
 
 
 
- ### Video
+ ### 📽️Video
 [Watch the introduction video here!](https://www.youtube.com/watch?v=gfhF3oYH178&feature=youtu.be) 
 
 **🏃🏻‍♂️‍➡️ Inference**
@@ -39,15 +36,15 @@ bash scripts/eval/dogr_bench_inference_ddp.sh
 scripts/eval/dogr_evaluation.sh
 ``` 
 
-### DOGR Weights
+### 😃DOGR Weights
 The model weights are in [MODEL WEIGHTS](https://huggingface.co/tencent/DOGR)
 
- ### Demo
+ ### 🖥️Demo
 ```bash
 python inference/demo_gradio.py
 ```
 
-### Citation
+### 🖌️Citation
 
 ```
 @misc{zhou2025dogrversatilevisualdocument,
@@ -60,5 +57,5 @@ python inference/demo_gradio.py
       url={https://arxiv.org/abs/2411.17125}, 
 }
 ```
-
+### 📑LICENSE
 Please refer to our [LICENSE](https://github.com/Tencent/DOGR/blob/master/LICENSE) for more license details.
