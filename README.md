@@ -45,15 +45,14 @@ python inference/demo_gradio.py
 ### Citation
 
 ```
-@misc{zhou2024dogeversatilevisualdocument,
-      title={DOGE: Towards Versatile Visual Document Grounding and Referring}, 
-      author={Yinan Zhou and Yuxin Chen and Haokun Lin and Shuyu Yang and Li Zhu and Zhongang Qi and Chen Ma and Ying Shan},
-      year={2024},
+@misc{zhou2025dogrversatilevisualdocument,
+      title={DOGR: Towards Versatile Visual Document Grounding and Referring}, 
+      author={Yinan Zhou and Yuxin Chen and Haokun Lin and Yichen Wu and Shuyu Yang and Zhongang Qi and Chen Ma and Li Zhu and Ying Shan},
+      year={2025},
       eprint={2411.17125},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2411.17125}, 
-}
 }
 ```
 
