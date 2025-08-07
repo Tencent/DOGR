@@ -57,4 +57,4 @@ python inference/demo_gradio.py
 }
 ```
 
-Please refer to our [license file](https://github.com/Tencent/DOGR/blob/master/README.md) for more details.
+Please refer to our [LICENSE](https://github.com/Tencent/DOGR/blob/master/LICENSE) for more license details.
