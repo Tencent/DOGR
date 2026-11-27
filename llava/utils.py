@@ -13,7 +13,7 @@ server_error_msg = "**NETWORK ERROR DUE TO HIGH TRAFFIC. PLEASE REGENERATE OR RE
 moderation_msg = "I am sorry. Your input may violate our content moderation guidelines. Please avoid using harmful or offensive content."
 
 handler = None
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch.distributed as dist
 

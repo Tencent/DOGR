@@ -65,3 +65,28 @@ python inference/demo_gradio.py
 ```
 ### 📑LICENSE
 Please refer to our [LICENSE](https://github.com/Tencent/DOGR/blob/master/LICENSE) for more license details.
+
+
+### CPU / CUDA inference without Ascend
+
+`torch_npu` is optional for inference. When installed, its backend registration is
+preserved; failures inside an installed Ascend extension are not suppressed.
+The vision tower follows the loaded language model's device and dtype rather
+than being moved unconditionally to NPU. Ascend-specific training scripts still
+require their documented NPU dependencies.
+
+For a local DOGR checkpoint, choose the device and override the vision tower path
+if the checkpoint contains a path from another machine:
+
+```bash
+PYTHONPATH=. python scripts/llava_qwen2_demo.py \
+  --model-path /path/to/DOGR \
+  --vision-tower /path/to/InternViT-300M-448px \
+  --device cuda:0 --max-new-tokens 128
+```
+
+Offline regression checks (no pretrained weights required):
+
+```bash
+PYTHONPATH=. python -m unittest discover -s tests -p test_optional_ascend.py -v
+```

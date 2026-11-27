@@ -14,7 +14,7 @@
 
 
 from typing import Optional, Tuple
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 

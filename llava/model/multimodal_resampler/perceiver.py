@@ -1,7 +1,7 @@
 """
 Taken from https://github.com/lucidrains/flamingo-pytorch
 """
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 from einops import rearrange, repeat

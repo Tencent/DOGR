@@ -4,7 +4,7 @@ import base64
 import math
 import ast
 import re
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 from transformers import StoppingCriteria
 from llava.constants import IMAGE_TOKEN_INDEX

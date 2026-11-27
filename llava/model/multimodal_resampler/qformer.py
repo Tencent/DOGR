@@ -13,7 +13,7 @@ import os
 import warnings
 from dataclasses import dataclass
 from typing import Optional, Tuple, Dict, Any
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 from torch import Tensor, device, dtype, nn

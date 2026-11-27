@@ -1,5 +1,5 @@
 import math
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 import torch.nn as nn
 from torch.nn import functional as F

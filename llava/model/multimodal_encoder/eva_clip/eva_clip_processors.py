@@ -1,7 +1,7 @@
 """
 # Adapted from https://github.com/baaivision/EVA/tree/master/EVA-CLIP
 """
-import torch_npu
+from llava.accelerators import torch_npu
 
 from torchvision import transforms
 from torchvision.transforms.functional import InterpolationMode

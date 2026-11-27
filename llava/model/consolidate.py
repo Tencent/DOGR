@@ -4,7 +4,7 @@ python3 -m llava.model.consolidate --src ~/model_weights/llava-7b --dst ~/model_
 """
 
 import argparse
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM

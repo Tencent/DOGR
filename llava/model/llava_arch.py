@@ -18,7 +18,7 @@ from abc import ABC, abstractmethod
 import math
 import re
 import time
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 import torch.nn as nn
 from .multimodal_encoder.builder import build_vision_tower
