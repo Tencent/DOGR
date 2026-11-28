@@ -5,7 +5,7 @@ Wraps timm (https://github.com/rwightman/pytorch-image-models) models for use as
 
 import logging
 from collections import OrderedDict
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 import torch.nn as nn

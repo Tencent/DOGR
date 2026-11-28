@@ -4,7 +4,7 @@ python3 -m llava.model.make_delta --base ~/model_weights/llama-7b --target ~/mod
 """
 
 import argparse
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 from tqdm import tqdm

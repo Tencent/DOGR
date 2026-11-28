@@ -1,5 +1,5 @@
 from math import pi
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 from torch import nn
 from einops import rearrange, repeat

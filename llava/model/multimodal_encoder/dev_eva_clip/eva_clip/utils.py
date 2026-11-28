@@ -3,7 +3,7 @@ import collections.abc
 import logging
 import math
 import numpy as np
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 from torch import nn as nn

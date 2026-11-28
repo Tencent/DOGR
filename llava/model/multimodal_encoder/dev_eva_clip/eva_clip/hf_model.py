@@ -4,7 +4,7 @@ Wraps HuggingFace transformers (https://github.com/huggingface/transformers) mod
 """
 
 import re
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 import torch.nn as nn

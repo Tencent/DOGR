@@ -3,7 +3,7 @@
 # --------------------------------------------------------
 import math
 import os
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

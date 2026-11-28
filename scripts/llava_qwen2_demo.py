@@ -8,27 +8,38 @@ from PIL import Image
 import requests
 import copy
 import torch
-import torch_npu
+import argparse
+from llava.accelerators import torch_npu
 
 import sys
 import warnings
 
 
 warnings.filterwarnings("ignore")
-pretrained = "checkpoints/llavanext-model_zoo_InternViT-300M-448px-from-InternVL2-8b-model_zoo_Qwen_Qwen2-7B-Instruct-ln_mlp2x_gelu-llava_665k-qwen_1_5"
-# pretrained = "lmms-lab/llava-onevision-qwen2-7b-si"
+parser = argparse.ArgumentParser(description="Run the DOGR example on a chosen device.")
+parser.add_argument("--model-path", required=True)
+parser.add_argument("--vision-tower", help="Override the vision-tower path saved in the checkpoint")
+parser.add_argument("--device", default="cuda:0" if torch.cuda.is_available() else "cpu")
+parser.add_argument("--image", default="scripts/example.png")
+parser.add_argument("--max-new-tokens", type=int, default=256)
+args = parser.parse_args()
+pretrained = args.model_path
 model_name = "llava_qwen"
-device = "npu:1"
-device_map = "npu:1"
-torch_npu.npu.set_device('npu:1') 
-tokenizer, model, image_processor, max_length = load_pretrained_model(pretrained, None, model_name, device_map=device_map, attn_implementation="sdpa")  # Add any other thing you want to pass in llava_model_args
+device = args.device
+device_map = device
+if device.split(":", 1)[0] == "npu":
+    if torch_npu is None:
+        raise RuntimeError("--device npu requires the Ascend torch_npu extension")
+    torch_npu.npu.set_device(device)
+overwrite_config = {"mm_vision_tower": args.vision_tower} if args.vision_tower else None
+tokenizer, model, image_processor, max_length = load_pretrained_model(pretrained, None, model_name, device_map=device_map, attn_implementation="sdpa", overwrite_config=overwrite_config)  # Add any other thing you want to pass in llava_model_args
 
 model.eval()
 
-img_path = "scripts/example.png"
+img_path = args.image
 image = Image.open(img_path)
 image_tensor = process_images([image], image_processor, model.config)
-image_tensor = [_image.to(dtype=torch.float16, device=device) for _image in image_tensor]
+image_tensor = [_image.to(dtype=model.dtype, device=device) for _image in image_tensor]
 
 conv_template = "qwen_1_5"  # Make sure you use correct chat template for different models
 question = DEFAULT_IMAGE_TOKEN + "\nIn this line chart, the vertical axis is height and the horizontal axis is age. Does Jane's height exceed Kangkang's height in the end?\nAnswer the question using a single word or phrase."
@@ -62,7 +73,7 @@ cont = model.generate(
     image_sizes=image_sizes,
     do_sample=False,
     temperature=0,
-    max_new_tokens=4096,
+    max_new_tokens=args.max_new_tokens,
 )
 text_outputs = tokenizer.batch_decode(cont, skip_special_tokens=True)
 print(text_outputs)

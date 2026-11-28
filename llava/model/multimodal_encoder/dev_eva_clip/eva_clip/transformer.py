@@ -4,7 +4,7 @@ from collections import OrderedDict
 import math
 from typing import Callable, Optional, Sequence
 import numpy as np
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 from torch import nn
 from torch.nn import functional as F

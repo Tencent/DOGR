@@ -6,7 +6,7 @@ from typing import Optional, Tuple, Union, Dict
 from dataclasses import dataclass
 from functools import partial, reduce
 from PIL import Image
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 import torch.utils.checkpoint
 from torch import nn

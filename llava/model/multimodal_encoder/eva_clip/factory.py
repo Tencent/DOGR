@@ -6,7 +6,7 @@ import re
 from copy import deepcopy
 from pathlib import Path
 from typing import Optional, Tuple, Union, Dict, Any
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 
 _MODEL_CONFIG_PATHS = [Path(__file__).parent / f"model_configs/"]

@@ -9,7 +9,7 @@ from typing import Optional, Tuple, Union
 from functools import partial
 
 import numpy as np
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 import torch.nn.functional as F
 from torch import nn

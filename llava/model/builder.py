@@ -18,7 +18,7 @@ import warnings
 import shutil
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig, BitsAndBytesConfig
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 
 from llava.model import *
@@ -279,12 +279,16 @@ def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, l
         if mm_use_im_start_end:
             tokenizer.add_tokens([DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN], special_tokens=True)
         model.resize_token_embeddings(len(tokenizer))
+        # Spatial image merging embeds LINEBREAK_TOKEN through this tokenizer.
+        # Bind it here so every loader caller can use the released checkpoints,
+        # including callers other than the original inference demo.
+        model.tokenizer = tokenizer
 
         vision_tower = model.get_vision_tower()
         if not vision_tower.is_loaded:
             vision_tower.load_model(device_map=device_map)
         if device_map != "auto":
-            vision_tower.to(device="npu", dtype=torch.float16)
+            vision_tower.to(device=model.device, dtype=model.dtype)
         image_processor = vision_tower.image_processor
 
     if hasattr(model.config, "max_sequence_length"):

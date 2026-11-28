@@ -6,7 +6,7 @@ Adapted from https://github.com/openai/CLIP. Originally MIT License, Copyright (
 import os
 import warnings
 from typing import List, Optional, Union
-import torch_npu
+from llava.accelerators import torch_npu
 
 import torch
 
@@ -51,7 +51,7 @@ def load_openai_model(
         A torchvision transform that converts a PIL image into a tensor that the returned model can take as its input
     """
     if device is None:
-        device = "npu" if torch_npu.npu.is_available() else "cpu"
+        device = "cuda" if torch.cuda.is_available() else ("npu" if torch_npu is not None and torch_npu.npu.is_available() else "cpu")
     if precision is None:
         precision = "fp32" if device == "cpu" else "fp16"
 

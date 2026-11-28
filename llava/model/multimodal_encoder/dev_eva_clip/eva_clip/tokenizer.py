@@ -11,7 +11,7 @@ from typing import Union, List
 
 import ftfy
 import regex as re
-import torch_npu
+from llava.accelerators import torch_npu
 import torch
 
 # https://stackoverflow.com/q/62691279
