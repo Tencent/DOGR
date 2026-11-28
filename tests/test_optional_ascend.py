@@ -69,6 +69,7 @@ class OptionalAscendTests(unittest.TestCase):
              patch("llava.model.builder.LlavaQwenForCausalLM.from_pretrained", return_value=model):
             load_pretrained_model("unused-local-path", None, "llava_qwen", device_map="cpu", attn_implementation="sdpa")
         vision.to.assert_called_once_with(device=torch.device("cpu"), dtype=torch.float32)
+        self.assertIs(model.tokenizer, tokenizer)
 
     def test_multimodal_forward_keeps_device(self):
         import torch
